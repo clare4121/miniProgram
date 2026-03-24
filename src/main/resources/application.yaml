@@ -5,6 +5,7 @@ spring:
 
   datasource:
     url: jdbc:mysql://172.17.0.9:3306/travel_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    #sh-cynosdbmysql-grp-cr0kwxee.sql.tencentcdb.com:21733 --外网地址
     username: chenyapeng
     password: Admin01!
     driver-class-name: com.mysql.cj.jdbc.Driver
