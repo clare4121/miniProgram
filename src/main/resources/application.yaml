@@ -3,9 +3,9 @@ spring:
     name: minprogram
     version: 1.0.0
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/travel_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
-    username: root
-    password: 123456
+    url: jdbc:mysql://172.17.0.9:3306/travel_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: chenyapeng
+    password: Admin01!
     driver-class-name: com.mysql.cj.jdbc.Driver
   data:
     redis:
