@@ -1,6 +1,6 @@
 package com.minprogram.interaction.dto;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
 public class ToggleActionRequest {
     @NotNull(message = "targetType不能为空")

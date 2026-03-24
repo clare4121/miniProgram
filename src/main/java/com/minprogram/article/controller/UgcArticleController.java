@@ -5,7 +5,7 @@ import com.minprogram.article.dto.CreateUgcArticleRequest;
 import com.minprogram.article.service.UgcArticleService;
 import com.minprogram.common.api.ApiResponse;
 import com.minprogram.common.security.UserContext;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;

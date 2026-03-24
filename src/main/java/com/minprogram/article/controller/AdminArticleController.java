@@ -6,7 +6,7 @@ import com.minprogram.article.service.AdminArticleService;
 import com.minprogram.common.api.ApiResponse;
 import com.minprogram.common.security.UserContext;
 import com.minprogram.user.service.AdminGuardService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

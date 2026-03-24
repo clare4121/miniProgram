@@ -4,7 +4,7 @@ import com.minprogram.auth.dto.LoginByCodeRequest;
 import com.minprogram.auth.dto.LoginResponse;
 import com.minprogram.auth.service.AuthService;
 import com.minprogram.common.api.ApiResponse;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.minprogram.auth.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 public class LoginByCodeRequest {
     @NotBlank(message = "code不能为空")

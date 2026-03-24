@@ -1,5 +1,6 @@
 package com.minprogram.interaction.service;
 
+import com.minprogram.article.entity.Article;
 import com.minprogram.article.repository.ArticleRepository;
 import com.minprogram.interaction.repository.CommentRepository;
 import com.minprogram.interaction.repository.FavoriteRepository;
@@ -29,7 +30,7 @@ public class InteractionCounterService {
         if (!Integer.valueOf(1).equals(targetType)) {
             return;
         }
-        var article = articleRepository.findById(targetId).orElse(null);
+        Article article = articleRepository.findById(targetId).orElse(null);
         if (article == null) {
             return;
         }

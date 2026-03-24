@@ -6,7 +6,7 @@ import com.minprogram.interaction.dto.CreateCommentRequest;
 import com.minprogram.interaction.entity.Comment;
 import com.minprogram.interaction.repository.CommentRepository;
 import com.minprogram.interaction.service.InteractionCounterService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

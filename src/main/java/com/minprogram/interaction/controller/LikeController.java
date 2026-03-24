@@ -7,7 +7,8 @@ import com.minprogram.interaction.dto.ToggleActionResponse;
 import com.minprogram.interaction.entity.LikeRecord;
 import com.minprogram.interaction.repository.LikeRecordRepository;
 import com.minprogram.interaction.service.InteractionCounterService;
-import jakarta.validation.Valid;
+import java.util.Optional;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +32,7 @@ public class LikeController {
         if (userId == null) {
             return ApiResponse.fail("未登录");
         }
-        var existing = likeRecordRepository.findByUserIdAndTargetTypeAndTargetId(userId, req.getTargetType(), req.getTargetId());
+        Optional<LikeRecord> existing = likeRecordRepository.findByUserIdAndTargetTypeAndTargetId(userId, req.getTargetType(), req.getTargetId());
         if (existing.isPresent()) {
             likeRecordRepository.delete(existing.get());
             interactionCounterService.refreshCounts(req.getTargetType(), req.getTargetId());

@@ -1,7 +1,7 @@
 package com.minprogram.common.exception;
 
 import com.minprogram.common.api.ApiResponse;
-import jakarta.validation.ConstraintViolationException;
+import javax.validation.ConstraintViolationException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;

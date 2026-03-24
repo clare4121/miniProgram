@@ -62,7 +62,7 @@ public class ArticleService {
         resp.setPage(currentPage);
         resp.setSize(currentSize);
         resp.setTotal(result.getTotalElements());
-        resp.setRecords(result.getContent().stream().map(this::toListItem).toList());
+        resp.setRecords(result.getContent().stream().map(this::toListItem).collect(java.util.stream.Collectors.toList()));
         return resp;
     }
 

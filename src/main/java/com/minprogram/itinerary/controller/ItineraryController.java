@@ -10,7 +10,7 @@ import com.minprogram.itinerary.dto.SaveItineraryResponse;
 import com.minprogram.itinerary.service.ItineraryGenerateService;
 import com.minprogram.itinerary.service.ItineraryQueryService;
 import com.minprogram.itinerary.service.ItineraryWriteService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

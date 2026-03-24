@@ -52,11 +52,11 @@ public class ItineraryGenerateService {
         if (travelMode == null) {
             return "未指定";
         }
-        return switch (travelMode) {
-            case 1 -> "步行";
-            case 2 -> "公共交通";
-            case 3 -> "自驾";
-            default -> "其他";
-        };
+        switch (travelMode) {
+            case 1: return "步行";
+            case 2: return "公共交通";
+            case 3: return "自驾";
+            default: return "其他";
+        }
     }
 }
