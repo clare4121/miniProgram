@@ -9,6 +9,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -27,11 +28,26 @@ public class User {
     @Column(name = "avatar_url", length = 255)
     private String avatarUrl;
 
+    @Column(name = "avatar_id")
+    private Long avatarId;
+
     @Column(nullable = false)
     private Integer status;
 
     @Column(nullable = false)
     private Integer role;
+
+    @Column(name = "gender", nullable = false)
+    private Integer gender;
+
+    @Column(length = 64)
+    private String city;
+
+    @Column
+    private LocalDate birthday;
+
+    @Column(length = 500)
+    private String bio;
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
@@ -49,6 +65,9 @@ public class User {
         }
         if (role == null) {
             role = 0;
+        }
+        if (gender == null) {
+            gender = 0;
         }
     }
 
@@ -89,6 +108,14 @@ public class User {
         this.avatarUrl = avatarUrl;
     }
 
+    public Long getAvatarId() {
+        return avatarId;
+    }
+
+    public void setAvatarId(Long avatarId) {
+        this.avatarId = avatarId;
+    }
+
     public Integer getStatus() {
         return status;
     }
@@ -103,6 +130,38 @@ public class User {
 
     public void setRole(Integer role) {
         this.role = role;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 
     public LocalDateTime getCreatedAt() {
